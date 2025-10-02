@@ -1,0 +1,647 @@
+main {
+    font-size: 18px;
+    background-color: var(--Neutral-900);
+    color: white;
+    font-family: "DM Sans", sans-serif;
+    height: 100%;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px;
+    font-size: 14px;
+}
+
+.header-container a {
+    display: flex;
+    align-items: center;
+}
+
+.header-container a img {
+    width: 150px;
+}
+
+/* MENU */
+.header-container nav {
+    position: relative;
+}
+
+.header-container .menu-open {
+    display: flex;
+    background-color: var(--Neutral-800);
+    padding: 8px 12px;
+    border-radius: 7px;
+    border: none;
+    margin-bottom: 5px;
+}
+
+.header-container .menu-open .units-icon {
+    width: 25px;
+    padding-right: 10px;
+}
+
+.header-container .menu-open .dropdown-icon {
+    width: 22px;
+    padding-left: 10px;
+}
+
+.header-container .menu-open a,
+a:visited {
+    color: white;
+}
+
+.header-container nav .drop-down {
+    display: none;
+    position: absolute;
+    right: 0px;
+    min-width: 170px;
+    z-index: 1;
+    background-color: var(--Neutral-800);
+    padding: 8px 12px;
+    border: none;
+    border-radius: 10px;
+}
+
+.header-container nav .drop-down p {
+    color: var(--Neutral-300);
+    padding-top: 5px;
+}
+
+.header-container nav .drop-down li {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.header-container nav .drop-down .not-imperial {
+    border-bottom: 1px solid var(--Neutral-600);
+    padding-bottom: 7px;
+}
+
+.not-selected img {
+    display: none;
+}
+
+.selected {
+    background-color: var(--Neutral-700);
+    border-radius: 5px;
+}
+
+.header-container nav:hover .drop-down {
+    display: block;
+}
+
+.header-container nav .drop-down li:hover {
+    background-color: var(--Neutral-600);
+    border-radius: 5px;
+}
+
+/* MENU'S END*/
+
+h1 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    position: relative;
+    width: 385px;
+    align-self: center;
+}
+
+.search .search-box {
+    border: 1px solid var(--Neutral-600);
+    border-radius: 6px;
+    display: flex;
+}
+
+.search .search-box input {
+    padding: 11px 100px 11px 10px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border: none;
+    background-color: var(--Neutral-800);
+    color: white;
+}
+
+.search .search-box input:focus {
+    outline: none;
+}
+
+.search .search-box img {
+    padding: 7px;
+    background-color: var(--Neutral-800);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.search-box .hover-ativo {
+    display: none;
+    min-width: 310px;
+    z-index: 1;
+    background-color: var(--Neutral-800);
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    top: 40px;
+}
+
+.search-box:hover .hover {
+    display: block;
+}
+
+.search .hover-ativo li {
+    padding: 7px 5px;
+    border-radius: 5px;
+}
+
+.search .hover-ativo li:hover {
+    background-color: var(--Neutral-600);
+    cursor: pointer;
+}
+
+.hover-loading {
+    display: none;
+    min-width: 310px;
+    z-index: 1;
+    background-color: var(--Neutral-800);
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    top: 40px;
+}
+
+.hover-loading.hover {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.hover-loading li {
+    padding-left: 10px;
+}
+
+.search .search-btn {
+    padding: 10px 12px;
+    border-radius: 7px;
+    border: none;
+    margin-left: 10px;
+    color: white;
+    background-color: var(--Blue-500);
+}
+
+.search .search-btn:hover {
+    background-color: var(--Blue-500a);
+    cursor: pointer;
+}
+
+/* CONTENT Left Side */
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content .left-side {
+    width: 500px;
+}
+
+.content .left-side .time {
+    background: url(../images/bg-today-large.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 500px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    margin-top: 20px;
+}
+
+.content .left-side .time-loading {
+    background-color: var(--Neutral-800);
+    border-radius: 10px;
+    width: 500px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+.content .left-side .time .tuesday h3 {
+    padding-bottom: 7px;
+}
+
+.content .left-side .time .tuesday p {
+    font-size: 14px;
+}
+
+.content .left-side .celsius {
+    display: flex;
+    align-items: center;
+}
+
+.loader-text {
+    font-size: 14px;
+    padding-top: 10px;
+    font-weight: 300;
+}
+
+.content .left-side .celsius-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 5px;
+    animation: loader-dot 1.5s infinite ease-in-out;
+    animation-delay: calc(0.5s);
+    position: relative;
+}
+
+.loader-dot:nth-child(2) {
+    animation-delay: calc(0.5s + 0.25s);
+    top: -5px;
+}
+
+.loader-dot:nth-child(3) {
+    animation-delay: calc(0.5s + 0.5s);
+}
+
+@keyframes loader-dot {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.content .left-side .celsius img {
+    width: 100px;
+}
+
+.content .left-side .celsius h2 {
+    font-size: 80px;
+    font-weight: 600;
+    padding-left: 20px;
+}
+
+.content .left-side .time-conditions {
+    display: flex;
+    align-items: center;
+}
+
+.content .left-side .time-conditions .time-button {
+    width: 156px;
+    background-color: var(--Neutral-800);
+    height: 100px;
+    margin: 18px 18px 0px 0px;
+    border: 1px solid var(--Neutral-600);
+    border-radius: 10px;
+    padding: 18px;
+}
+
+.content .left-side .time-conditions .time-button:last-child {
+    margin-right: 0px;
+}
+
+.content .left-side .time-conditions .time-button .conditions {
+    padding-bottom: 20px;
+    font-size: 14px;
+}
+
+.content .left-side .time-conditions .time-button .valor {
+    font-size: 21px;
+    font-weight: 200;
+}
+
+.content h4 {
+    margin: 30px 0px 10px 0px;
+}
+
+.content .left-side .daily-forecast {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content .left-side .daily-forecast .tue,
+.wed,
+.thu,
+.fri,
+.sat,
+.sun,
+.mon {
+    background-color: var(--Neutral-800);
+    width: 65px;
+    height: 150px;
+    margin-right: 10px;
+    border-radius: 10px;
+    padding: 6px;
+    text-align: center;
+    border: solid 1px var(--Neutral-600);
+}
+
+.content .left-side .daily-forecast .mon {
+    margin-right: 0px;
+}
+
+.content .left-side .daily-forecast .tue,
+.wed,
+.thu,
+.fri,
+.sat,
+.sun,
+.mon,
+h5 {
+    font-weight: 400;
+    padding-bottom: 15px;
+}
+
+.content .left-side .daily-forecast .tue .condit,
+.wed .condit,
+.thu .condit,
+.fri .condit,
+.sat .condit,
+.sun .condit,
+.mon .condit {
+    font-weight: 300;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+.content .left-side .daily-forecast img {
+    width: 50px;
+}
+
+/* RIGHT SIDE */
+
+.content .right-side {
+    margin-top: 20px;
+    width: 260px;
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+.content .right-side img {
+    width: 18%;
+}
+
+.content .right-side .hourly-forecast {
+    background-color: var(--Neutral-800);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.content .right-side .hourly-forecast .select-day .hourly-f {
+    font-size: 14px;
+}
+
+.content .right-side .hourly-forecast .select-day .btn-change-day {
+    background-color: var(--Neutral-600);
+    padding: 5px 10px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.content .right-side .hourly-forecast .select-day .btn-change-day a {
+    padding-right: 7px;
+}
+
+.content .right-side .hourly-forecast .select-day .btn-change-day img {
+    width: 9px;
+}
+
+.content .right-side .hourly-forecast .select-day {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.content .right-side .hourly-forecast .select-day ul {
+    position: absolute;
+    display: none;
+    width: 200px;
+    background-color: var(--Neutral-800);
+    border: 1px solid var(--Neutral-600);
+    padding: 10px;
+    border-radius: 10px;
+    top: 30px;
+    left: 30px;
+}
+
+.content .right-side .hourly-forecast .select-day ul li {
+    padding: 8px 5px;
+    border-radius: 5px;
+}
+
+.content .right-side .hourly-forecast .select-day ul li:hover {
+    background-color: var(--Neutral-600);
+    cursor: pointer;
+}
+
+.content .right-side .hourly-forecast .select-day:hover ul {
+    display: block;
+}
+
+.content .right-side .hourly-forecast .tempo {
+    display: flex;
+    border: 1px solid var(--Neutral-600);
+    padding: 5px;
+    border-radius: 7px;
+    background-color: var(--Neutral-700);
+    margin-bottom: 10px;
+    width: 220px;
+    height: 44px;
+}
+
+.content .right-side .hourly-forecast .tempo:last-child {
+    margin-bottom: 0px;
+}
+
+.content .right-side .hourly-forecast .tempo .tempo-img {
+    display: flex;
+    align-items: center;
+}
+
+.content .right-side .hourly-forecast .tempo .tempo-img p {
+    padding-left: 5px;
+}
+
+.null {
+    height: 100vh;
+}
+
+.not-found {
+    padding-top: 30px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.search-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-page {
+    display: none;
+}
+
+@media (min-width: 801px) {
+    .search ul {
+        left: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .search {
+        flex-direction: column;
+    }
+
+    .search .search-btn {
+        margin-top: 10px;
+        width: 310px;
+        margin-right: 10px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 520px) {
+    h1 {
+        font-size: 60px;
+    }
+
+    .search ul {
+        width: 343px;
+    }
+
+    .search .search-box,
+    input {
+        width: 343px;
+    }
+
+    .search .search-btn {
+        width: 343px;
+    }
+
+    .content .left-side {
+        width: 343px
+    }
+
+    .content .left-side .time {
+        background: url(../images/bg-today-small.svg);
+        background-repeat: no-repeat;
+        width: 343px;
+        height: 285px;
+        flex-direction: column;
+    }
+
+    .content .left-side .time-loading {
+        width: 343px;
+        height: 285px;
+        flex-direction: column;
+    }
+
+    .content .left-side .time .tuesday {
+        padding-top: 40px;
+        text-align: center;
+    }
+
+    .content .left-side .time .tuesday h3 {
+        font-size: 30px;
+    }
+
+    .content .left-side .time .tuesday p {
+        font-size: 16px;
+    }
+
+    .content .left-side .time .celsius {
+        padding: 0px 30px 30px 0px;
+        gap: 50px;
+    }
+
+    .content .left-side .time .celsius img {
+        width: 120px;
+        padding-left: 10px;
+    }
+
+    .content .left-side .time .celsius h2 {
+        padding-left: 0px;
+    }
+
+    .content .left-side .time-conditions {
+        display: grid;
+        grid-template-areas: "time-button time-button"
+            "time-button time-button";
+        width: 343px;
+    }
+
+    .content .left-side .time-conditions .time-button {
+        width: 162px;
+    }
+
+    .content .left-side .daily-forecast {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+
+    .content .left-side .daily-forecast .day {
+        margin-bottom: 12px;
+        width: 105px;
+    }
+
+    .content .left-side .daily-forecast .tue,
+    .wed,
+    .fri,
+    .sat {
+        margin-right: 12px;
+    }
+
+    .content .left-side .daily-forecast .thu,
+    .sun,
+    .mon {
+        margin-right: 0px;
+    }
+
+    .content .right-side {
+        margin: 0px;
+    }
+}

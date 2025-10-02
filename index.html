@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/variables.css">
+    <link rel="stylesheet" href="src/css/styles.css">
+</head>
+
+<body>
+    <main>
+        <div class="header-container">
+            <a href="" class="img-logo">
+                <img src="src/images/logo.svg" alt="Logo">
+            </a>
+
+            <nav>
+                <div class="menu-open">
+                    <a href="">
+                        <img src="src/images/icon-units.svg" alt="Units icon" class="units-icon">
+                        <p>Units</p>
+                        <img src="src/images/icon-dropdown.svg" alt="Dropdown icon" class="dropdown-icon">
+                    </a>
+                </div>
+
+                <ul class="drop-down">
+                    <li id="change-link" class="link imperial not-selected"><a href="">Switch to imperial</a><img
+                            src="src/images/icon-checkmark.svg" alt="check mark"></li>
+                    <p>Temperature</p>
+                    <li class="link not-imperial selected"><a href="">Celsius (ºC)</a><img
+                            src="src/images/icon-checkmark.svg" alt="check mark"></li>
+                    <li class="link not-selected"><a href="">Fahrenheit (ºF)</a><img src="src/images/icon-checkmark.svg"
+                            alt="check mark"></li>
+                    <p>Wind Speed</p>
+                    <li class="link not-imperial selected"><a href="">km/h</a><img src="src/images/icon-checkmark.svg"
+                            alt="check mark"></li>
+                    <li class="link not-selected"><a href="">mph</a><img src="src/images/icon-checkmark.svg"
+                            alt="check mark"></li>
+                    <p>Precipitation</p>
+                    <li class="link not-imperial selected"><a href="">Milimeters (mm)</a><img
+                            src="src/images/icon-checkmark.svg" alt="check mark"></li>
+                    <li class="link not-selected"><a href="">Inches (in)</a><img src="src/images/icon-checkmark.svg"
+                            alt="check mark"></li>
+                </ul>
+            </nav>
+        </div>
+        <section id="search-content" class="search-content">
+            <h1>How's the sky looking today?</h1>
+
+            <div class="search">
+                <div class="search-box">
+                    <img src="src/images/icon-search.svg" alt="Search icon">
+                    <input class="input" type="text" placeholder="Search for a place...">
+
+                    <ul class="hover-ativo hover">
+                        <li class="city-name"><a href="">City Name</a></li>
+                        <li class="city-name"><a href="">City Name</a></li>
+                        <li class="city-name"><a href="">City Name</a></li>
+                        <li class="city-name"><a href="">City Name</a></li>
+                    </ul>
+                </div>
+                <button class="search-btn">Search</button>
+
+                <ul class="hover-loading">
+                    <img src="src/images/icon-loading.svg" alt="">
+                    <li class="hover-loading-li"><a href="">Search in progress</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="content" class="content">
+            <div id="days">
+                <ul>
+                    <li class="day-select"><a href="">Monday</a></li>
+                    <li class="day-select"><a href="">Tuesday</a></li>
+                    <li class="day-select"><a href="">Wednesday</a></li>
+                    <li class="day-select"><a href="">Thursday</a></li>
+                    <li class="day-select"><a href="">Friday</a></li>
+                    <li class="day-select"><a href="">Saturday</a></li>
+                    <li class="day-select"><a href="">Sunday</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="./src/scripts/index.js"></script>
+</body>
+
+</html>
