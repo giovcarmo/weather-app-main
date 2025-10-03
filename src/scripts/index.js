@@ -6,14 +6,18 @@ const searchBoxHover = document.querySelector(".hover-ativo")
 const hoverLoading = document.querySelector(".hover-loading")
 
 const days = document.getElementById("days").innerHTML
-export { days }
 
-const daySelect = document.querySelectorAll(".day-select")
+const wrongButtonContent = document.getElementById("wrong-button").innerHTML
 
-daySelect.forEach(day => {
-    day.addEventListener("click", () => {
-        console.log(day)
-    })    
+
+document.addEventListener("click", (event) => {
+    const clickedElement = event.target;
+    if (clickedElement.classList.contains('day-select')) {
+        screen.renderContentLoading()
+        setTimeout(() => {
+            screen.renderContentWrong()
+        }, 3000);
+    }
 });
 
 const cityName = document.querySelectorAll(".city-name")
@@ -86,9 +90,10 @@ changeLink.addEventListener('click', e => {
 function renderScreen() {
     screen.renderContentLoading()
     setTimeout(() => {
-        screen.renderContent()
+    screen.renderContent()
     }, 3000);
 }
 
 renderScreen();
 
+export { days, wrongButtonContent }

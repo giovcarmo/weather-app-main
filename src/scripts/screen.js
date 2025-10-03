@@ -1,6 +1,8 @@
-import { days } from './index.js'
+import { days, wrongButtonContent } from './index.js'
+const main = document.getElementById('main')
 
 const screen = {
+    writeNewContent: main,
     weatherData: document.getElementById('content'),
     renderContent() {
         this.weatherData.innerHTML = `
@@ -430,6 +432,51 @@ const screen = {
                                     <div class="null">
                                         <h2 class="not-found">No search result found!</h2>
                                     </div>
+                                    `
+    },
+    renderContentWrong() {
+        this.writeNewContent.innerHTML = `
+                                        <div class="header-container">
+                                            <a href="" class="img-logo">
+                                                <img src="src/images/logo.svg" alt="Logo">
+                                            </a>
+
+                                            <nav>
+                                                <div class="menu-open">
+                                                    <a href="">
+                                                        <img src="src/images/icon-units.svg" alt="Units icon" class="units-icon">
+                                                        <p>Units</p>
+                                                        <img src="src/images/icon-dropdown.svg" alt="Dropdown icon" class="dropdown-icon">
+                                                    </a>
+                                                </div>
+
+                                                <ul class="drop-down">
+                                                    <li id="change-link" class="link imperial not-selected"><a href="">Switch to imperial</a><img
+                                                            src="src/images/icon-checkmark.svg" alt="check mark"></li>
+                                                    <p>Temperature</p>
+                                                    <li class="link not-imperial selected"><a href="">Celsius (ºC)</a><img
+                                                            src="src/images/icon-checkmark.svg" alt="check mark"></li>
+                                                    <li class="link not-selected"><a href="">Fahrenheit (ºF)</a><img src="src/images/icon-checkmark.svg"
+                                                            alt="check mark"></li>
+                                                    <p>Wind Speed</p>
+                                                    <li class="link not-imperial selected"><a href="">km/h</a><img src="src/images/icon-checkmark.svg"
+                                                            alt="check mark"></li>
+                                                    <li class="link not-selected"><a href="">mph</a><img src="src/images/icon-checkmark.svg"
+                                                            alt="check mark"></li>
+                                                    <p>Precipitation</p>
+                                                    <li class="link not-imperial selected"><a href="">Milimeters (mm)</a><img
+                                                            src="src/images/icon-checkmark.svg" alt="check mark"></li>
+                                                    <li class="link not-selected"><a href="">Inches (in)</a><img src="src/images/icon-checkmark.svg"
+                                                            alt="check mark"></li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                        <div class="null">
+                                            <img src="src/images/icon-error.svg" alt="Error" class="wrong-img">
+                                            <h1>Something went wrong</h1>
+                                            <p>We couldn't connect to the server(API error). Please try<br> again in a few moments.</p>
+                                            ${wrongButtonContent}
+                                        </div>
                                     `
     }
 }
